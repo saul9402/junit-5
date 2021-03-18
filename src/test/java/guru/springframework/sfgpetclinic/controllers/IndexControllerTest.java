@@ -80,6 +80,9 @@ class IndexControllerTest {
 		assumeTrue("GURU".equalsIgnoreCase("GURU"));
 	}
 
+	/**
+	 * https://junit.org/junit5/docs/current/user-guide/#writing-tests-conditional-execution
+	 */
 	@EnabledOnOs(OS.MAC)
 	@Test
 	void testMeOnMacOS() {
