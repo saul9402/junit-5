@@ -27,6 +27,10 @@ class OwnerTest {
 						() -> assertEquals("Key West", owner.getCity(), "City Did Not Match"),
 						() -> assertEquals("1231231234", owner.getTelephone())));
 
+		/**
+		 * Método que viene de la biblioteca harmcrest, ya es vieja pero aun se usa y es
+		 * útil
+		 */
 		assertThat(owner.getCity(), is("Key West"));
 	}
 }
