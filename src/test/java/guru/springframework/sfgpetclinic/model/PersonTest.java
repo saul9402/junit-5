@@ -46,6 +46,20 @@ class PersonTest implements ModelTests {
 		// todo - impl
 	}
 
+	/**
+	 * Se pueden inyectar tres tipos de "resolvers"
+	 * 
+	 * TestInfo - Sirve para obtener informacion sobre el nomre dle tes, el metodo,
+	 * la clase de test y los tags del test
+	 * 
+	 * RepetitionInfo - Sirve para obtener informacion sobre test que se repiten.
+	 * 
+	 * TestReporter - Permite publicar informacion del runtime para reportes del
+	 * test
+	 * 
+	 * @param testInfo
+	 * @param repetitionInfo
+	 */
 	@RepeatedTest(5)
 	void myRepeatedTestWithDI(TestInfo testInfo, RepetitionInfo repetitionInfo) {
 		System.out.println(testInfo.getDisplayName() + ": " + repetitionInfo.getCurrentRepetition());
