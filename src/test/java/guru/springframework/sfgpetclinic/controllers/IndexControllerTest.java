@@ -11,50 +11,47 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class IndexControllerTest {
 
-    IndexController controller;
+	IndexController controller;
 
-    @BeforeEach
-    void setUp() {
-        controller = new IndexController();
-    }
+	@BeforeEach
+	void setUp() {
+		controller = new IndexController();
+	}
 
-    @DisplayName("Test Proper View name is returned for index page")
-    @Test
-    void index() {
-        assertEquals("index", controller.index());
-        assertEquals("index", controller.index(), "Wrong View Returned");
+	@DisplayName("Test Proper View name is returned for index page")
+	@Test
+	void index() {
+		assertEquals("index", controller.index());
+		assertEquals("index", controller.index(), "Wrong View Returned");
 
-        assertEquals("index", controller.index(), () -> "Another Expensive Message " +
-                "Make me only if you have to");
-    }
+		assertEquals("index", controller.index(), () -> "Another Expensive Message " + "Make me only if you have to");
+	}
 
-    @Test
-    @DisplayName("Test exception")
-    void oupsHandler() {
-        assertThrows(ValueNotFoundException.class, () -> {
-            controller.oopsHandler();
-        });
-    }
+	@Test
+	@DisplayName("Test exception")
+	void oupsHandler() {
+		assertThrows(ValueNotFoundException.class, () -> controller.oopsHandler());
+	}
 
-    @Disabled("Demo of timeout")
-    @Test
-    void testTimeOut() {
+	@Disabled("Demo of timeout")
+	@Test
+	void testTimeOut() {
 
-        assertTimeout(Duration.ofMillis(100), () -> {
-            Thread.sleep(5000);
+		assertTimeout(Duration.ofMillis(100), () -> {
+			Thread.sleep(5000);
 
-            System.out.println("I got here");
-        });
-    }
+			System.out.println("I got here");
+		});
+	}
 
-    @Disabled("Demo of timeout")
-    @Test
-    void testTimeOutPrempt() {
+	@Disabled("Demo of timeout")
+	@Test
+	void testTimeOutPrempt() {
 
-        assertTimeoutPreemptively(Duration.ofMillis(100), () -> {
-            Thread.sleep(5000);
+		assertTimeoutPreemptively(Duration.ofMillis(100), () -> {
+			Thread.sleep(5000);
 
-            System.out.println("I got here 2342342342342");
-        });
-    }
+			System.out.println("I got here 2342342342342");
+		});
+	}
 }
