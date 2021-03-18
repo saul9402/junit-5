@@ -55,7 +55,7 @@ class OwnerTest implements ModelTests {
 	/**
 	 * También se repite por cada elemento del "CSV"
 	 * 
-	 * En este caso son 3 columnas FL, OH y MI y cada una tiene dos filas de valores
+	 * En este caso son 3 columnas cada una tiene tres filas de valores
 	 */
 	@DisplayName("CSV Input Test")
 	@ParameterizedTest(name = "{displayName} - [{index}] {arguments}")
