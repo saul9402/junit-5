@@ -67,6 +67,9 @@ class IndexControllerTest {
 	@Test
 	void testAssumptionTrue() {
 
+		/**
+		 * Se ignora cuando no es verdad, ya que se asume que lo es
+		 */
 		assumeTrue("GURU".equalsIgnoreCase(System.getenv("GURU_RUNTIME")));
 	}
 
