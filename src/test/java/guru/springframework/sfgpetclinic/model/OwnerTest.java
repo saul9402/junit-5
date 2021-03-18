@@ -38,6 +38,9 @@ class OwnerTest implements ModelTests {
 		assertThat(owner.getCity(), is("Key West"));
 	}
 
+	/**
+	 * Repite el test para cada valor que se dé en el ValueSource
+	 */
 	@ParameterizedTest
 	@ValueSource(strings = { "Spring", "Framework", "Guru" })
 	void testValueSource(String val) {
