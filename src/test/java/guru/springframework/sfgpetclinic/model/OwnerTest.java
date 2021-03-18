@@ -41,6 +41,8 @@ class OwnerTest implements ModelTests {
 
 	/**
 	 * Repite el test para cada valor que se dé en el ValueSource
+	 * 
+	 * Se agrega formato para el nombre del metodo, :3
 	 */
 	@DisplayName("Value Source Test")
 	@ParameterizedTest(name = "{displayName} - [{index}] {arguments}")
