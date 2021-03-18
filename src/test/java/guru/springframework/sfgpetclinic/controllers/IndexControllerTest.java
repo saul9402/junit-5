@@ -29,6 +29,9 @@ class IndexControllerTest {
 
 		assertEquals("index", controller.index(), () -> "Another Expensive Message " + "Make me only if you have to");
 
+		/**
+		 * Esta aserción es de AssertJ
+		 */
 		assertThat(controller.index()).isEqualTo("index"); 
 	}
 
