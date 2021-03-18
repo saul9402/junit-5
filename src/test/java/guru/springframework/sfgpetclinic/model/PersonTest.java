@@ -37,6 +37,10 @@ class PersonTest implements ModelTests {
 				() -> assertEquals("Buck", person.getLastName(), "Last Name Failed"));
 	}
 
+	/**
+	 * Value son las veces que se va a repetir el metodo; Y lo demás e spara
+	 * customizar el nombre
+	 */
 	@RepeatedTest(value = 10, name = "{displayName} : {currentRepetition} - {totalRepetitions}")
 	@DisplayName("My Repeated Test")
 	@Test
