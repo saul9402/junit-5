@@ -14,7 +14,6 @@ import org.junit.jupiter.api.Tag;
  * @author savila
  *
  */
-@Tag("model")
 class PersonTest {
 
 	@Test
