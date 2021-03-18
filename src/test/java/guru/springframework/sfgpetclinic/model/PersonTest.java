@@ -41,7 +41,9 @@ class PersonTest implements ModelTests {
 	 */
 	@RepeatedTest(value = 10, name = "{displayName} : {currentRepetition} - {totalRepetitions}")
 	@DisplayName("My Repeated Test")
-	@Test
+	/**
+	 * @Test Es redundante ponerla cuando se trata de test repetitivos
+	 */
 	void myRepeatedTest() {
 		// todo - impl
 	}
