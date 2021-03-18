@@ -5,6 +5,13 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Estos tags sirven para "agrupar" las pruebas y ejecutarlas conforme este
+ * criterio. Esto se configura en run configurations
+ * 
+ * @author savila
+ *
+ */
 @Tag("model")
 class PersonTest {
 
