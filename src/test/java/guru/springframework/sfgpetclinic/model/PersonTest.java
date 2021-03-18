@@ -1,32 +1,39 @@
 package guru.springframework.sfgpetclinic.model;
 
-import guru.springframework.sfgpetclinic.ModelTests;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class PersonTest implements ModelTests {
+import org.junit.jupiter.api.Tag;
 
-    @Test
-    void groupedAssertions() {
-        //given
-        Person person = new Person(1l, "Joe", "Buck");
+/**
+ * Estos tags sirven para "agrupar" las pruebas y ejecutarlas conforme este
+ * criterio. Esto se configura en run configurations
+ * 
+ * @author savila
+ *
+ */
+@Tag("model")
+class PersonTest {
 
-        //then
-        assertAll("Test Props Set",
-                () -> assertEquals(person.getFirstName(), "Joe"),
-                () -> assertEquals(person.getLastName(), "Buck"));
-    }
+	@Test
+	void groupedAssertions() {
+		// given
+		Person person = new Person(1l, "Joe", "Buck");
 
-    @Test
-    void groupedAssertionMsgs() {
-        //given
-        Person person = new Person(1l, "Joe", "Buck");
+		// then
+		assertAll("Test Props Set", () -> assertEquals("Joe", person.getFirstName()),
+				() -> assertEquals("Buck", person.getLastName()));
+	}
 
-        //then
-        assertAll("Test Props Set",
-                () -> assertEquals(person.getFirstName(), "Joe", "First Name Failed"),
-                () -> assertEquals(person.getLastName(), "Buck", "Last Name Failed"));
-    }
+	@Test
+	void groupedAssertionMsgs() {
+		// given
+		Person person = new Person(1l, "Joe", "Buck");
+
+		// then
+		assertAll("Test Props Set", () -> assertEquals("Joe", person.getFirstName(), "First Name Failed"),
+				() -> assertEquals("Buck", person.getLastName(), "Last Name Failed"));
+	}
 }
