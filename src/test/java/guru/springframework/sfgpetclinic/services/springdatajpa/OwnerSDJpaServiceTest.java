@@ -5,7 +5,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
 
 @Disabled(value = "Disabled until we learn Mocking")
 class OwnerSDJpaServiceTest {
@@ -21,7 +20,8 @@ class OwnerSDJpaServiceTest {
     @Disabled
     @Test
     void findByLastName() {
-        Owner foundOwner = service.findByLastName("Buck");
+        @SuppressWarnings("unused")
+		Owner foundOwner = service.findByLastName("Buck");
     }
 
     @Test
