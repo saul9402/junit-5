@@ -2,10 +2,10 @@ package guru.springframework.sfgpetclinic.model;
 
 import org.junit.jupiter.api.Test;
 
+import guru.springframework.sfgpetclinic.ModelTests;
+
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
-import org.junit.jupiter.api.Tag;
 
 /**
  * Estos tags sirven para "agrupar" las pruebas y ejecutarlas conforme este
@@ -14,7 +14,7 @@ import org.junit.jupiter.api.Tag;
  * @author savila
  *
  */
-class PersonTest {
+class PersonTest implements ModelTests {
 
 	@Test
 	void groupedAssertions() {
