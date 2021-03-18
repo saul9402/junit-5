@@ -8,28 +8,25 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class IndexControllerTest {
 
-    IndexController controller;
+	IndexController controller;
 
-    @BeforeEach
-    void setUp() {
-        controller = new IndexController();
-    }
+	@BeforeEach
+	void setUp() {
+		controller = new IndexController();
+	}
 
-    @DisplayName("Test Proper View name is returned for index page")
-    @Test
-    void index() {
-        assertEquals("index", controller.index());
-        assertEquals("index", controller.index(), "Wrong View Returned");
+	@DisplayName("Test Proper View name is returned for index page")
+	@Test
+	void index() {
+		assertEquals("index", controller.index());
+		assertEquals("index", controller.index(), "Wrong View Returned");
 
-        assertEquals("index", controller.index(), () -> "Another Expensive Message " +
-                "Make me only if you have to");
-    }
+		assertEquals("index", controller.index(), () -> "Another Expensive Message " + "Make me only if you have to");
+	}
 
-    @Test
-    @DisplayName("Test exception")
-    void oupsHandler() {
-        assertThrows(ValueNotFoundException.class, () -> {
-            controller.oopsHandler();
-        });
-    }
+	@Test
+	@DisplayName("Test exception")
+	void oupsHandler() {
+		assertThrows(ValueNotFoundException.class, () -> controller.oopsHandler());
+	}
 }
