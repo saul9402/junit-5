@@ -40,6 +40,9 @@ class OwnerTest implements ModelTests {
 		assertThat(owner.getCity(), is("Key West"));
 	}
 
+	/**
+	 * Repite el test por cada valor en el enum
+	 */
 	@DisplayName("Enum Source Test")
 	@ParameterizedTest(name = "{displayName} - [{index}] {arguments}")
 	@EnumSource(OwnerType.class)
