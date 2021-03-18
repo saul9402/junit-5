@@ -37,6 +37,10 @@ class IndexControllerTest {
 	@Test
 	void testTimeOut() {
 
+		/**
+		 * Si se hace asi esperara lo que tarde el metodo en ejecutar y devolvera lo que
+		 * se espera
+		 */
 		assertTimeout(Duration.ofMillis(100), () -> {
 			Thread.sleep(5000);
 
@@ -48,6 +52,10 @@ class IndexControllerTest {
 	@Test
 	void testTimeOutPrempt() {
 
+		/**
+		 * En cambio si se hace asi sólo va a esperar lo que se defina en el timeout y
+		 * terminara el proceso
+		 */
 		assertTimeoutPreemptively(Duration.ofMillis(100), () -> {
 			Thread.sleep(5000);
 
