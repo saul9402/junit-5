@@ -101,6 +101,9 @@
 					<argLine>
 						--illegal-access=permit
 					</argLine>
+					<!-- eEsta parte sirve para excluir o agregar tests dependiendo de su 
+						tag en la clase, para el caso se ejecuta solo los que tengan el tag model 
+						y se excluyen los que tengan el tag controllers -->
 					<!--<groups>model</groups> -->
 					<!--<excludedGroups>controllers</excludedGroups> -->
 				</configuration>
@@ -133,7 +136,8 @@
 	</build>
 	<!-- Esta dependencia es necesaria para generar reportes de los test, también 
 		cabe recordar que al momento de compilar el proyecto con maven se debe ejcutar 
-		"site" como parte del ciclo de maven para que se creee el reporte. -->
+		"site" como parte del ciclo de maven para que se creee el reporte, ejemplo: 
+		mvn clean install site -->
 	<reporting>
 		<plugins>
 			<plugin>
