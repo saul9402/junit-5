@@ -114,6 +114,7 @@
                         --illegal-access=permit
                     </argLine>
                 </configuration>
+<!--                 Esta parte es para agregar test de integracion -->
                 <executions>
                     <execution>
                         <goals>
